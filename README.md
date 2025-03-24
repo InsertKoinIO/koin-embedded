@@ -1,16 +1,21 @@
-# Koin Relocation Scripts
+# Koin Embedded for Kotlin SDK & Library
 
-Those scripts help to rebuild & package Koin project with a different name. The interest is for <b>SDK & Library development</b>, to avoid conflict between embedded Koin version and any consuming application.
+This project proposes scripts to help rebuild & package Koin project with a different package name. The interest is for <b>SDK & Library development</b>, to avoid conflict between embedded Koin version and any consuming application that would use another version of Koin, that might conflict.
 
-Example of Koin embeded version: [Kotzilla Repository](https://repository.kotzilla.io/#browse/browse:Koin-Embedded)
+Feedback or help? Contact [Koin Team](mailto:koin@kotzilla.io).
 
+# Koin Embedded Version
+
+Here is an example of Koin embeded version: [Kotzilla Repository](https://repository.kotzilla.io/#browse/browse:Koin-Embedded) 
+- Available packages: `embedded-koin-core`, `embedded-koin-android`
+- Relocation on from `org.koin.*` to `embedded.koin.*`
+
+Setupr your Gradle config with this Maven repository:
 ```kotlin
 maven { 'https://repository.kotzilla.io/repository/kotzilla-platform/' }
 ```
 
-Contact us: [Koin Team](mailto:koin@kotzilla.io)
-
-# Setup & Run
+# Koin Relocation Scripts
 
 ## Setup
 Open `relocate.properties` file to specify:
@@ -19,13 +24,13 @@ Open `relocate.properties` file to specify:
 - KOIN_MODULES - list of Koin modules to rename with prefix. I.e `koin-core` will become `embeded-koin-core`
 - BUILD_DIR - folder where Koin built artifacts are copied
 
-## Run the Script
+## Run the Scripts
 
-> Requirements: JDK 17 environment
+> Requirements: JDK 17 environment to build Koin project
 
 Just run `./relocate.sh`. The output build will be in `./build` or $BUILD_DIR
 
-## Get the Jar/Aar
+## Get the Koin JAR/AAR
 
 Once executed, open the `./build` or $BUILD_DIR folder to get your aar/jar artifacts, to add to your project
 
@@ -39,6 +44,8 @@ The `embedded-project-sample` folder contains sample for Koin embedded SDK Libra
 ## Install Library
 
 from `embedded-project-sample/sample-library` run `install.sh`
+
+> This projects uses Kotzilla Koin Embedded repo.
 
 ## Run App & Library
 
