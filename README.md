@@ -4,10 +4,16 @@ Given that Android plugin doesn't allow to use external aar files anymore, and f
 
 This project proposes scripts to help rebuild & package Koin project with a different package name. The interest is for <b>SDK & Library development</b>, to avoid conflict between embedded Koin version and any consuming application that would use another version of Koin, that might conflict.
 
+With this project project you have following choices:
+- [build & pack your relocated version](https://github.com/InsertKoinIO/koin-embedded/tree/main?tab=readme-ov-file#setup)
+- [use pre-build embedded version](https://github.com/InsertKoinIO/koin-embedded/tree/main?tab=readme-ov-file#koin-embedded-version)
+
 Feedback or help? Contact [Koin Team](mailto:koin@kotzilla.io).
 
 
 # Koin Relocation Scripts
+
+Clone this repository to have access to all relocation scripts. Then follow next setup steps.
 
 ## Setup
 
@@ -93,7 +99,7 @@ Here is an example of Koin embeded version: [Kotzilla Repository](https://reposi
 - Available packages: `embedded-koin-core`, `embedded-koin-android`
 - Relocation on from `org.koin.*` to `embedded.koin.*`
 
-Setupr your Gradle config with this Maven repository:
+Setup your Gradle config with this Maven repository:
 ```kotlin
 maven { 'https://repository.kotzilla.io/repository/kotzilla-platform/' }
 ```
