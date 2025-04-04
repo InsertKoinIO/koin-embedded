@@ -1,6 +1,7 @@
 # Koin Embedded for Kotlin SDK & Library
 
 Given that Android plugin doesn't allow to use external aar files anymore, and fatjar plugins are outdated ...
+
 This project proposes scripts to help rebuild & package Koin project with a different package name. The interest is for <b>SDK & Library development</b>, to avoid conflict between embedded Koin version and any consuming application that would use another version of Koin, that might conflict.
 
 Feedback or help? Contact [Koin Team](mailto:koin@kotzilla.io).
@@ -66,7 +67,7 @@ Once executed, open the `./build` or $BUILD_DIR folder to get your aar/jar artif
 
 All Koin modules will be installed locally, in your local Maven repo.
 
-You can also run `publishAllPublicationsTo<Repo>Repository` (here below it would be `publishAllPublicationsToMyRepositoryRepository`), from `relocation/projects` folder, to publish your Koin modules to your repo. 
+You can also run `publishAllPublicationsTo<Repo>Repository` (here below it would be `publishAllPublicationsToMyRepositoryRepository`), from `<relocation-dir>/projects` folder, to publish your Koin modules to your repo. 
 
 # Project Sample
 
@@ -86,7 +87,7 @@ from `embedded-project-sample/sample-library` run `install.sh`
 from `embedded-project-sample/sample-app`, run the Android app
 
 
-# Koin Embedded Version - Exemple
+# Koin Embedded Version
 
 Here is an example of Koin embeded version: [Kotzilla Repository](https://repository.kotzilla.io/#browse/browse:Koin-Embedded) 
 - Available packages: `embedded-koin-core`, `embedded-koin-android`
