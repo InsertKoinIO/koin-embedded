@@ -1,0 +1,10 @@
+repositories {
+    maven {
+        name = "MyRepository"
+        url = uri("https://repo.url.com")
+        credentials {
+            username = findProperty("USER")?.toString() ?: System.getenv("USER") ?: ""
+            password = findProperty("PWD")?.toString() ?: System.getenv("PWD") ?: ""
+        }
+    }
+}

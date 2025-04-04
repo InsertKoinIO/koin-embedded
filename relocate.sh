@@ -59,3 +59,6 @@ mkdir -p $BUILD_DIR
 
 echo "Copy relocated $RELOCATION_PREFIX artifacts to $BUILD_DIR ..."
 cp -Rf ~/.m2/repository/io/insert-koin/$RELOCATION_PREFIX* $BUILD_DIR
+
+echo "Update repository publication ..."
+./repository-update.sh
