@@ -75,6 +75,18 @@ All Koin modules will be installed locally, in your local Maven repo.
 
 You can also run `publishAllPublicationsTo<Repo>Repository` (here below it would be `publishAllPublicationsToMyRepositoryRepository`), from `<relocation-dir>/projects` folder, to publish your Koin modules to your repo. 
 
+
+# Koin Embedded Version
+
+Here is an example of Koin embedded version: [Kotzilla Repository](https://repository.kotzilla.io/#browse/browse:Koin-Embedded) 
+- Available packages: `embedded-koin-core`, `embedded-koin-android`
+- Relocation on from `org.koin.*` to `embedded.koin.*`
+
+Setup your Gradle config with this Maven repository:
+```kotlin
+maven { 'https://repository.kotzilla.io/repository/kotzilla-platform/' }
+```
+
 # Project Sample
 
 The `embedded-project-sample` folder contains sample for Koin embedded SDK Library.
@@ -91,15 +103,3 @@ from `embedded-project-sample/sample-library` run `install.sh`
 ## Run App & Library
 
 from `embedded-project-sample/sample-app`, run the Android app
-
-
-# Koin Embedded Version
-
-Here is an example of Koin embeded version: [Kotzilla Repository](https://repository.kotzilla.io/#browse/browse:Koin-Embedded) 
-- Available packages: `embedded-koin-core`, `embedded-koin-android`
-- Relocation on from `org.koin.*` to `embedded.koin.*`
-
-Setup your Gradle config with this Maven repository:
-```kotlin
-maven { 'https://repository.kotzilla.io/repository/kotzilla-platform/' }
-```
